@@ -1,21 +1,14 @@
-from typing import List
-
 class Solution:
-    def jump(self, nums: List[int]) -> int:
+    def canJump(self, nums: List[int]) -> int:
         n = len(nums)
-        if n == 1:
-            return 0  
-        
-        jumps = 0
-        current_end = 0
-        farthest = 0
-        
-        for i in range(n - 1):
+        farthest=0
+        if n == 1: 
+            return True
+        for i in range(n-1):
+            if i > farthest:
+                break
             farthest = max(farthest, i + nums[i])
-            if i == current_end:
-                jumps += 1
-                current_end = farthest
-                if current_end >= n - 1:
-                    break
+            if farthest >= n-1:
+                return True
         
-        return jumps
+        return False
