@@ -13,6 +13,3 @@ def convert(s, num_rows):
         current_row += 1 if going_down else -1
     
     return ''.join(rows)
-
-print(convert("PAYPALISHIRING", 3)) 
-print(convert("PAYPALISHIRING", 4))  
