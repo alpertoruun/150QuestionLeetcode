@@ -4,6 +4,3 @@ class Solution(object):
         if clean_text.lower() == clean_text[::-1].lower():
             return True
         return False
-
-
-        
