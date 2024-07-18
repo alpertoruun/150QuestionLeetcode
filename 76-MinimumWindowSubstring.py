@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 def minWindow(s, t):
     if t == "": return ""
     countT, window = defaultdict(int), defaultdict(int)
